@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: bording-box;
+}
+
+.natthapan{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+nav{
+    padding: 1rem;
+    background-color: black;
+}
+
+.nav-nat{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Diamond a{
+    font-size: 2rem;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu li{
+    margin: 0 1rem;
+}
+
+.menu li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.maincontent{
+    background-color: pink;
+}
+
+.maincontent-nat{
+    display: flex;
+}
+
+.maincontent-info{
+    width: 100%;
+    padding: 1rem;
+}
+
+.maincontent-info h3{
+    font-size: 2rem;
+}
+
+.maincontent-info p{
+    margin: 2rem 0;
+}
+
+.maincontent-info .maincontent-btn{
+    background-color: black;
+    color: white;
+    padding: 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.maincontent-img img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content-nat{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.content-item img{
+    width: 90;
+    height: 300px;
+    object-fit: cover;
+}
+
+.content-title{
+    margin: 2rem 0;
+}
+
+.content-item h4{
+    margin-top: 2rem;
+}
+
+.content-item p{
+    margin: 1rem 0;
+    margin-right: 2rem;
+}
+
+/* content-item a{
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding: 0rem 0rem;
+    border: 10px;
+} */
+
+.contact {
+    margin-top: 2rem;
+    padding: 3rem;
+    background-color: black;
+    color: aliceblue;
+}
+
+.contact-item{
+    display: grid;
+    column-gap: 2rem;
+}
+
+.contact-item h4{
+    font-size: 1rem;
+    display: flex;
+    margin: 1rem 0;
+}
+
+.contact-item p a{
+    display: flexbox;
+    margin: 1rem 0;
+    color: white;
+    text-decoration: none;
+}
