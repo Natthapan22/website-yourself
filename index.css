@@ -108,27 +108,192 @@ nav{
     border: 10px;
 } */
 
+/* ====== Contact Section Enhancements ====== */
+
 .contact {
-    margin-top: 2rem;
-    padding: 3rem;
-    background-color: black;
-    color: aliceblue;
+    background-color: #edbaed; /* สีพื้นหลังอ่อนๆ */
+    padding: 4rem 0;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
 }
 
-.contact-item{
-    display: grid;
-    column-gap: 2rem;
+.contact-item {
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #f2cbee;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* เงาให้ดูมีมิติ */
+    max-width: 600px; /* จำกัดความกว้าง */
+    margin: 0 auto; /* จัดกึ่งกลาง */
 }
 
-.contact-item h4{
-    font-size: 1rem;
+.contact-item h3 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 2.5rem;
+    position: relative; /* สำหรับเส้นใต้ */
+}
+
+.contact-item h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #007bff; /* สีน้ำเงินสำหรับเส้นใต้ */
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Social Media Links Styling */
+.social-links {
     display: flex;
-    margin: 1rem 0;
+    justify-content: center;
+    gap: 1.5rem; /* ระยะห่างระหว่างไอคอน */
+    margin-bottom: 3rem;
+    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อหน้าจอเล็ก */
 }
 
-.contact-item p a{
-    display: flexbox;
-    margin: 1rem 0;
-    color: white;
+.social-icon {
+    display: inline-flex; /* จัดให้ไอคอนและข้อความอยู่บรรทัดเดียวกัน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    background-color: #e9ecef; /* สีพื้นหลังเริ่มต้น */
+    color: #343a40; /* สีข้อความเริ่มต้น */
     text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px; /* ทำให้มุมโค้งมน */
+    font-size: 1.1rem;
+    transition: all 0.3s ease; /* แอนิเมชันเมื่อโฮเวอร์ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon i {
+    margin-right: 0.8rem; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+    font-size: 1.3rem;
+}
+
+/* Hover Effects and Specific Colors */
+.social-icon:hover {
+    transform: translateY(-3px); /* เลื่อนขึ้นเล็กน้อยเมื่อโฮเวอร์ */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* เงาเข้มขึ้น */
+}
+
+.social-icon.facebook:hover {
+    background-color: #3b5998;
+    color: white;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.social-icon.line:hover {
+    background-color: #00c300;
+    color: white;
+}
+
+/* Contact Info Styling (Email, Phone) */
+.contact-info p {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 1rem;
+    display: flex; /* จัดให้อยู่ในบรรทัดเดียวกับไอคอน */
+    align-items: center;
+    justify-content: center; /* จัดกึ่งกลาง */
+}
+
+.contact-info p i {
+    margin-right: 10px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+    color: #007bff; /* สีไอคอน */
+    font-size: 1.2rem;
+}
+
+.contact-info p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info p a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-item {
+        padding: 1.5rem;
+    }
+
+    .contact-item h3 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .social-links {
+        flex-direction: column; /* เรียงเป็นแนวตั้งบนมือถือ */
+        gap: 1rem;
+    }
+
+    .social-icon {
+        width: 80%; /* ให้ปุ่มกว้างขึ้นบนมือถือ */
+        margin: 0 auto; /* จัดกึ่งกลาง */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-item {
+        padding: 1rem;
+    }
+
+    .contact-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .social-icon {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .social-icon i {
+        font-size: 1.1rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+}
+
+#backToTopBtn {
+    display: none; /* ซ่อนปุ่มเริ่มต้น */
+    position: fixed; /* ตรึงตำแหน่ง */
+    bottom: 30px; /* ระยะห่างจากด้านล่าง */
+    right: 30px; /* ระยะห่างจากด้านขวา */
+    z-index: 99; /* ให้ปุ่มอยู่ด้านหน้าสุด */
+    border: none; /* ไม่มีขอบ */
+    outline: none; /* ไม่มีขอบเมื่อโฟกัส */
+    background-color: #007bff; /* สีพื้นหลัง */
+    color: white; /* สีตัวอักษร */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปมือเมื่อชี้ */
+    padding: 15px 20px; /* ขนาดปุ่ม */
+    border-radius: 50%; /* ทำให้ปุ่มเป็นวงกลม */
+    font-size: 22px; /* ขนาดตัวอักษร/สัญลักษณ์ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #0056b3; /* สีเมื่อโฮเวอร์ */
+    transform: scale(1.1); /* ขยายเล็กน้อยเมื่อโฮเวอร์ */
+}
+
+/* ====== Fade-in/Slide-in on Scroll CSS ====== */
+.fade-in-on-scroll {
+    opacity: 0; /* ซ่อนองค์ประกอบเริ่มต้น */
+    transform: translateY(20px); /* เลื่อนลงเล็กน้อย */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* แอนิเมชัน */
+}
+
+.fade-in-on-scroll.is-visible {
+    opacity: 1; /* แสดงองค์ประกอบเมื่อมองเห็น */
+    transform: translateY(0); /* เลื่อนกลับไปยังตำแหน่งเดิม */
 }
